@@ -20,5 +20,5 @@
 .idea_modules/
 
 ProjetoSI/authentication/migrations/
-ProjetoSI/static/libs/
+ProjetoSI/authentication/static/libs/
 env/**
