@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Open Sans'!important;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    line-height: 0;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.ui-wrapper {
+    position: relative;
+    min-height: 65px;
+}
+
+.ui-wrapper div[ui-view].ng-enter {
+    opacity: 0;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.ui-wrapper div[ui-view].ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+button.btn[disabled="disabled"] {
+    background: #9d9d9d;
+}
+
+.container.container-funcionalidade {
+    padding: 0px 100px 50px;
+    overflow: hidden;
+}
+
+.container.container-funcionalidade .titulo-pagina {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto 25px;
+    border-bottom: 2px solid #295876;
+    text-align: center;
+}
+
+.container.container-funcionalidade .titulo-pagina h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 550;
+    color: #295876;
+}
+
+.container.container-funcionalidade .row {
+    margin: 15px 0px 20px;
+}
+
+.container.container-funcionalidade .row > div {
+    padding: 0px;
+}
+
+.container.container-funcionalidade .sobre-evento .evento-area-logo {
+    height: 100%;
+}
+
+.container.container-funcionalidade .sobre-evento form input,
+.container.container-funcionalidade .sobre-evento form textarea {
+    margin: 10px 0;
+}
+
+.container.container-funcionalidade .sobre-evento form textarea {
+    height: 140px;
+    resize: none;
+}
+
+.container.container-funcionalidade .imagem-evento img {
+    width: 100%;
+}
+
+.btn {
+    width: 220px;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    background-color: #2f668d;
+}
+
+.btn:focus,
+.btn:hover {
+    color: #fff;
+    background-color: #295876;
+}
+
+.btn:disabled {
+    cursor: default;
+}
+
+.btn:disabled:hover {
+    color: #fff;
+}
+
+input, textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+label {
+    color: #888;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+label.label-principal {
+    color: #555;
+}
+
+.f-right {
+    float: right;
+}
+
+.f-left {
+    float: left;
+}
+
+.img-funcionalidade2 {
+    width: 60%;
+    margin: 15px auto;
+
+}
+
+.img-funcionalidade2 img {
+    width: 380px;
+    height: 450px;
+    margin-bottom: 20px;
+    margin-left:-65px;
+    margin-top: -10px;
+}
+
+.error-message {
+    display: block;
+    margin: 5px 0 10px;
+    color: red;
+}
+
+.label-distance {
+    margin-top:20px;
+}
+
+.slickdois {
+    position: initial !important;
+}
+
+.no-outline {
+    outline: none;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
