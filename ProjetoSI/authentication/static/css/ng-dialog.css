@@ -1,0 +1,177 @@
+.ngdialog.ngdialog-theme-custom {
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content {
+    width: 410px;
+    height: auto;
+    padding: 10px 0px 0px 0px;
+    -webkit-border-radius: 0;
+    border-radius: 5px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content .center {
+    text-align: center;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content .center h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1b5d7e;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content form {
+    margin: 20px 0px;
+    padding: 0px 50px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content form input {
+    width: 350px;
+    margin: 35px 0px;
+    background-color: #ddd;
+    display: block;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content form > input:last-of-type {
+    margin-bottom: 15px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content form label.remember-me input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin: 0px 5px 0px 0px;
+    display: inline-block;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content .row {
+    height: 100px;
+    margin: 0px 0px;
+    padding: 20px 25px;
+    background-color: #bbb;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content .row a {
+    color: #444;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content .row .btn {
+    width: 120px;
+    height: 50px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message {
+    font-size: 16px;
+    font-family: 'Source Sans Pro';
+    line-height: 22px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message ul {
+    padding: 0 0 5px 35px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-button.ngdialog-button-primary {
+    background: #27ae60;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.ngdialog.ngdialog-theme-ely .ngdialog-content {
+    width: 900px;
+}
+
+.ngdialog.ngdialog-theme-custom2 {
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content {
+    width: 450px;
+    height: auto;
+    padding: 30px 0px 0px 0px;
+    -webkit-border-radius: 0;
+    border-radius: 5px;
+}
+
+
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content .center {
+    text-align: center;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content .center h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1b5d7e;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content form {
+    margin: 20px 0px;
+    padding: 0px 50px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content form input {
+    width: 350px;
+    margin: 35px 0px;
+    background-color: #ddd;
+    display: block;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content form > input:last-of-type {
+    margin-bottom: 15px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content form label.remember-me input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin: 0px 5px 0px 0px;
+    display: inline-block;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content .row {
+    height: 100px;
+    margin: 0px 0px;
+    padding: 20px 25px;
+    background-color: #bbb;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content .row a {
+    color: #444;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-content .row .btn {
+    width: 120px;
+    height: 50px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-message {
+    font-size: 16px;
+    font-family: 'Source Sans Pro';
+    line-height: 22px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-message ul {
+    padding: 0 0 5px 35px;
+}
+
+.ngdialog.ngdialog-theme-custom2 .ngdialog-button.ngdialog-button-primary {
+    background: #27ae60;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.dialog-row {
+    display: flex;
+}
+
+.dialog-btn {
+    margin: 0 auto;
+}
+
+.dialog-body {
+    padding: 10px 30px;
+}

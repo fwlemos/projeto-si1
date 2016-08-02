@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.f-right {
+	float: right;
+}
+
+.f-left {
+	float: left;
+}
+
+nav.login-nav {
+	height: 220px;
+	padding-top: 80px;
+	background-color: #1b2a49;
+}
+
+nav.login-nav .logo {
+	height: 70px;
+}
+
+nav.login-nav .btn {
+	width: 145px;
+	height: 60px;
+	margin: 5px 0px;
+	background-color: #bbb;
+	color: #295876;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+nav.login-nav .usuario {
+	display: none;
+}
+
+.center-block {
+	float: none !important
+}
+
+.body {
+	padding: 45px 0px;
+}
+
+.body p {
+	font-size: 20px;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+.body .conta h2 {
+	color: #295876;
+}
+
+.body .conta form input {
+	width: 100%;
+	height: 70px;
+	margin: 10px 0;
+	padding: 10px 15px;
+	font-size: 1.3em;
+	font-weight: 400;
+	background-color: #eee;
+	border: none;
+	border-radius: 5px;
+}
+
+.body .conta form .btn {
+	width: 100%;
+	height: 65px;
+	margin-top: 10px;
+	background-color: #295876;
+	font-size: 21px;
+	text-transform: none;
+	color: #fff;
+}
+
+.body .conta form .btn:disabled {
+	background-color: #999;
+	cursor: default;
+}
+
+.body .conta .separator {
+	margin: 15px 0;
+	/*text-align: center;*/
+	text-transform: uppercase;
+	color: #295876;
+	font-size: 17px;
+	display: inline-block;
+}
+
+.body .conta .separator img {
+	width: 45%;
+}
+
+.body .social-buttons .btn {
+	width: 170px;
+	height: 60px;
+	/*background-color: #295876;*/
+	font-size: 16px;
+	color: #fff;
+}
+
+.body .social-buttons .btn:first-child {
+	background-image: url("../img/Tela_de_acesso/botão_login_facebook.png");
+}
+
+.body .social-buttons .btn:last-child {
+	background-image: url("../img/Tela_de_acesso/botão_login_google.png");
+}
+
+.body .espaco-login {
+	height: 400px;
+	margin-bottom: 20px;
+	background-color: #333;
+}
+
+.body .etapas img {
+	margin: 0px 15px;
+}
