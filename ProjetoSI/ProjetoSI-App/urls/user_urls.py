@@ -1,7 +1,7 @@
 from django.conf.urls import url, include
 
-from authentication.views.login_view import *
-from authentication.views.user_view import UserByTokenIDHandler
+from ProjetoSI-App.views.login_view import *
+from ProjetoSI-App.views.user_view import UserByTokenIDHandler
 
 urlpatterns = [
     url(r'^rest-auth/login/$', LoginView.as_view(), name='rest_login'),

@@ -3,7 +3,7 @@
   "homepage": "https://github.com/fwlemos/projeto-si1",
   "authors": [],
   "description": "Indexador de arquivos",
-  "main": "authentication\\templates\\index.html",
+  "main": "ProjetoSI-App\\templates\\index.html",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^', include('django.contrib.auth.urls')),
     url(r'^$', RedirectView.as_view(url='projeto-si/')),
 
-    url(r'^projeto-si/', include('authentication.urls.index_urls'), name='namespace_index'),
-    url(r'^projeto-si/', include('authentication.urls.user_urls'), name='namespace_user_crud'),
+    url(r'^projeto-si/', include('ProjetoSI-App.urls.index_urls'), name='namespace_index'),
+    url(r'^projeto-si/', include('ProjetoSI-App.urls.user_urls'), name='namespace_user_crud'),
 ]
