@@ -1,0 +1,26 @@
+<div>
+    <div class="container body">
+        <div class="row">
+            <div class="col-sm-4 center-block">
+
+                <div class="conta">
+                    <h2 align="center">Sou novo aqui</h2>
+                    <form name="formLogin">
+                        <input type="nome" placeholder="Nome de usuário" ng-model="login.usuario.username" name="username" ng-required="true"/>
+                        <span class="error-message" ng-show="login.hasError">{{ login.errosCadastro.username[0] }}</span>
+                        <input type="email" placeholder="Email" ng-model="login.usuario.email" name="email" ng-required="true"/>
+                        <span class="error-message" ng-show="login.hasError">{{ login.errosCadastro.email[0] }}</span>
+                        <input type="password" placeholder="Crie uma senha" ng-model="login.usuario.password1" name="password1" ng-required="true"/>
+                        <input type="password" placeholder="Confirme sua senha" password-match="login.usuario.password1" ng-model="login.usuario.password2" name="password2" ng-required="true"/>
+
+                        <div ng-show="formLogin.password2.$dirty && formLogin.password2.$touched" ng-messages="formLogin.password2.$error">
+                            <div class="error-message" ng-message="match">Senhas diferem</div>
+                        </div>
+
+                        <button class="btn" type="submit" ng-disabled="formLogin.$invalid" ng-click="login.registraUsuario(login.usuario)">Registrar-se</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

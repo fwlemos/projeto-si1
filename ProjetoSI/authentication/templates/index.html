@@ -1,9 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="projetoSI1">
 <head>
-    <meta charset="UTF-8">
+    {% load staticfiles %}
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>ProjetoSI1</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-plain.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ng-dialog.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/barra-navegacao.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login-view.css' %}">
+
 </head>
-<body>
+<body ng-controller="appController as app">
+    <ng-include src="'/static/views/barra-navegacao.html'"></ng-include>
+    <div class="ui-wrapper">
+        <div class="view" ui-view></div>
+    </div>
+
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+    <!-- Angular -->
+    <script src="{% static 'libs/angular/angular.min.js' %}"></script>
+    <script src="{% static 'libs/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+    <script src="{% static 'libs/angular-cookies/angular-cookies.min.js' %}"></script>
+    <script src="{% static 'libs/angular-animate/angular-animate.min.js' %}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload.min.js' %}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload-shim.js' %}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload-all.min.js' %}"></script>
+    <script src="{% static 'libs/ng-dialog/js/ngDialog.min.js' %}"></script>
+    <script src="{% static 'libs/angular-messages/angular-messages.min.js' %}"></script>
+
+    <!-- App -->
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <!-- Services -->
+    <script src="{% static 'js/services/userService.js' %}"></script>
+
+    <!-- Controllers -->
+    <script src="{% static 'js/controllers/appController.js' %}"></script>
+    <script src="{% static 'js/controllers/loginController.js' %}"></script>
+
+    <!-- Directives -->
+    <script src="{% static 'js/directives/loginButton.js' %}"></script>
+    <script src="{% static 'js/directives/passwordMatch.js' %}"></script>
+
 </body>
 </html>

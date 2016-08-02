@@ -1,0 +1,21 @@
+<nav id="main-nav" class="navbar navbar-default" ng-class="{ 'login-nav': !app.isLoggedIn() }">
+
+    <div class="container">
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div id="info">
+                    <div login-button></div>
+                </div>
+            </li>
+
+            <li class="navbar-right">
+                <div class="nav navbar-nav usuario" ng-if="app.isLoggedIn()">
+                    <div class="nome-usuario" ng-bind="app.user.email"></div>
+                    <span class="separador"></span>
+                    <a class="botao-logout" ng-click="app.logout()">sair</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
