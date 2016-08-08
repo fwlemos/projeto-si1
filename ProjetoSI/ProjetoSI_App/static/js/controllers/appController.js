@@ -7,8 +7,6 @@
 		this.isLoggedIn = function() {
 			return userService.isLoggedIn();
 		};
-
-		this.isConfirmed = userService.isConfirmed;
 		
 		this.logout = function() {
 			userService.logout();

@@ -47,14 +47,14 @@ var app = angular.module('projetoSI1', ['ui.router', 'ngDialog', 'ngCookies', 'n
                 controller: 'loginController',
                 controllerAs: 'login'
             })
-			.state('arquivos', {
+            .state('arquivos', {
                 parent: 'app',
 				url: '/arquivos',
 				templateUrl: '/static/views/arquivos.html',
 				controller: 'arquivosController',
 				controllerAs: 'arquivos',
 				resolve: {
-					arquivos: function($http, userService) {
+                    arquivos: function($http, userService) {
 						return userService.getUserId().then(function(id) {
 							return $http.get("file-create/" + id + "/").then(function(data) {
 								return data;
@@ -62,8 +62,9 @@ var app = angular.module('projetoSI1', ['ui.router', 'ngDialog', 'ngCookies', 'n
 						});
 					}
 				}
-			})
+			});
 	}])
+
     .run(['$state', '$rootScope', '$q', 'userService', 'AUTH_EVENT', function($state, $rootScope, $q, userService, AUTH_EVENT) {
         var safeStates = ['login', 'senha-reset', 'senha-reset.confirm'];
 

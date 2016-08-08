@@ -7,7 +7,6 @@
 		self.userId = -1;
 		self.loggedUser = undefined;
 		self.token = '';
-		self.confirmed = false;
 
 		this.loginById = function(id, keepLogin, token) {
 			return $http.get('rest-auth/user/').then(function(user) {
@@ -15,12 +14,10 @@
 				self.loggedUser = user.data;
 				self.setToken(token, keepLogin);
 
-				return $http.get('confirm/').then(function (res) {
-					self.confirmed = res.data.confirmed;
-					$rootScope.$broadcast(AUTH_EVENT.loginSuccess);
+				$rootScope.$broadcast(AUTH_EVENT.loginSuccess);
 
-					return self.loggedUser;
-				});
+				return self.loggedUser;
+
 			});
 		};
 
@@ -43,8 +40,9 @@
 
 		this.getUserId = function() {
 			return self.getUser().then(function () {
+				console.log("USER ID: " + self.userId);
 				return self.userId;
-			})
+			});
 		};
 
 		this.setToken = function(token, keep) {
@@ -90,13 +88,9 @@
             return deferred.promise;
         };
 
-        this.isConfirmed = function () {
-			return self.confirmed;
-		}
-
         this.login = function(usuario) {
             var deferred = $q.defer();
-
+			console.log("USUARIO " + usuario);
             $http.post('login/', usuario).success(function(data) {
                 if (data.non_field_errors === undefined) {
                     self.loginById(data.user, usuario.keepLogin, data.key).then(function() {
