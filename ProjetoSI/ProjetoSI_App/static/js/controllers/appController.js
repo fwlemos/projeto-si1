@@ -7,6 +7,8 @@
 		this.isLoggedIn = function() {
 			return userService.isLoggedIn();
 		};
+
+		this.isConfirmed = userService.isConfirmed;
 		
 		this.logout = function() {
 			userService.logout();
@@ -14,7 +16,9 @@
 		};
 
         $rootScope.$on(AUTH_EVENT.loginSuccess, function() {
-		    ctrl.user = userService.getUser();
+		    userService.getUser().then(function (user) {
+				ctrl.user = user;
+			});
         });
 	}]);
 })();

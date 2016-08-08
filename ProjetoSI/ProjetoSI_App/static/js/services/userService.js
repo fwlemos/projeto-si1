@@ -5,22 +5,28 @@
 		var self = this;
 
 		self.userId = -1;
-		self.userLogado = null;
+		self.loggedUser = undefined;
 		self.token = '';
+		self.confirmed = false;
 
 		this.loginById = function(id, keepLogin, token) {
-			return $http.get('rest-auth/user/').success(function(user) {
+			return $http.get('rest-auth/user/').then(function(user) {
 				self.userId = id;
-				self.userLogado = user;
-
+				self.loggedUser = user.data;
 				self.setToken(token, keepLogin);
-				$rootScope.$broadcast(AUTH_EVENT.loginSuccess);
+
+				return $http.get('confirm/').then(function (res) {
+					self.confirmed = res.data.confirmed;
+					$rootScope.$broadcast(AUTH_EVENT.loginSuccess);
+
+					return self.loggedUser;
+				});
 			});
 		};
 
 		this.logout = function() {
 			self.userId = -1;
-			self.userLogado = null;
+			self.loggedUser = undefined;
 
 			$cookies.remove(SESSION_COOKIE_NAME);
 
@@ -32,11 +38,13 @@
 		};
 
 		this.isLoggedIn = function() {
-			return self.userId !== -1;
+			return angular.isDefined(self.loggedUser);
 		};
 
 		this.getUserId = function() {
-			return self.userId;
+			return self.getUser().then(function () {
+				return self.userId;
+			})
 		};
 
 		this.setToken = function(token, keep) {
@@ -57,32 +65,64 @@
 		};
 
 		this.getUser = function() {
-			return self.userLogado;
-		};
+            var deferred = $q.defer();
 
-		this.login = function(usuario) {
-			var deferred = $q.defer();
+            if (self.isLoggedIn()) {
+                deferred.resolve(self.loggedUser);
+                return deferred.promise;
+            }
 
-			$http.post('rest-auth/login/', usuario).success(function(data) {
-				if (data.non_field_errors === undefined) {
-					self.loginById(data.user, usuario.keepLogin, data.key);
-					deferred.resolve(self.userId);
-				} else {
-					$rootScope.$broadcast(AUTH_EVENT.loginFailed);
-					deferred.reject();
-				}
-			})
-			.error(function(data) {
-				$rootScope.$broadcast(AUTH_EVENT.loginFailed);
-				deferred.reject(data);
-			});
+            var token = $cookies.get(SESSION_COOKIE_NAME);
 
-			return deferred.promise;
-		};
+            if (token) {
+                $http.get('user-id/' + token).then(function(res) {
+                    self.loginById(res.data.user_id, true, token).then(function() {
+                        deferred.resolve(self.loggedUser);
+                    }, function() {
+                        $cookies.remove(SESSION_COOKIE_NAME);
+                        deferred.reject();
+                    });
+                });
+            } else {
+                deferred.reject();
+            }
+
+            return deferred.promise;
+        };
+
+        this.isConfirmed = function () {
+			return self.confirmed;
+		}
+
+        this.login = function(usuario) {
+            var deferred = $q.defer();
+
+            $http.post('login/', usuario).success(function(data) {
+                if (data.non_field_errors === undefined) {
+                    self.loginById(data.user, usuario.keepLogin, data.key).then(function() {
+                    	$state.go('arquivos');
+                        deferred.resolve(self.userId);
+                    });
+                } else {
+                    $rootScope.$broadcast(AUTH_EVENT.loginFailed);
+                    deferred.reject();
+                }
+            })
+            .error(function(data) {
+                $rootScope.$broadcast(AUTH_EVENT.loginFailed);
+                deferred.reject(data);
+            });
+
+            return deferred.promise;
+        };
 
 		this.reset = function() {
 			self.userId = -1;
-			self.userLogado = null;
+			self.loggedUser = undefined;
 		};
+
+		this.isAuthorized = function(toState, safeStates) {
+            return (!self.isLoggedIn() && safeStates.indexOf(toState) !== -1) || (self.isLoggedIn() && safeStates.indexOf(toState) === -1);
+        };
 	}]);
 })();

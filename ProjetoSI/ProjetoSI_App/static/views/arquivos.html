@@ -1,0 +1,23 @@
+
+<div class="eventos">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="evento-card">
+                    <button type="submit" class="evento-add"></button>
+                    <h2>Criar evento</h2>
+                </div>
+            </div>
+            <div ng-repeat="arquivo in arquivos.arquivos" class="col-md-4">
+                <div class="evento-card">
+                    <div class="evento-header">
+                        <div class="logo-evento"></div>
+                        <div class="logo-evento"></div>
+                        <h2>{{ evento.name | substr:25 }}</h2>
+                    </div>
+                    <div class="evento-opt clearfix">
+                        <button class="evento-share"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
