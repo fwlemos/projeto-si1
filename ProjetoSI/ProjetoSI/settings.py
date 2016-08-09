@@ -78,6 +78,10 @@ TEMPLATES = [
     },
 ]
 
+REST_AUTH_SERIALIZERS = {
+   'TOKEN_SERIALIZER': 'ProjetoSI_App.serializers.custom_token_serializer.TokenSerializer',
+}
+
 WSGI_APPLICATION = 'ProjetoSI.wsgi.application'
 
 
@@ -144,6 +148,12 @@ USE_TZ = False
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATIC_URL = '/static/'
+
+# Media files
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
 
 # Email settings
 

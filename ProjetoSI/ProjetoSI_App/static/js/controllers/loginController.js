@@ -6,7 +6,9 @@
 
 		this.registraUsuario = function (user) {
 			$http.post("rest-auth/registration/", user).success(function(data){
-				userService.loginById(data.user, true, data.key);
+				userService.loginById(data.user, true, data.key).then(function () {
+					$state.go('arquivos');
+				})
 			})
 			.error(function(data) {
 				ctrl.hasError = true;
@@ -17,7 +19,7 @@
 		this.login = function(user) {
 			userService.login(user).then(function() {
 				ngDialog.closeAll();
-				$state.go('indexador');
+				$state.go('arquivos');
 			}, function() {
 				ctrl.hasError = true;
 				ctrl.error = "Email ou senha inválidos";
