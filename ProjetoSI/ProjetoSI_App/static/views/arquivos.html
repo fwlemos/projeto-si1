@@ -1,24 +1,18 @@
-	<div class="eventos">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="evento-card">
-					<button type="submit" ui-sref="identidade-visual" class="evento-add"></button>
-					<h2>Criar evento</h2>
-				</div>
-			</div>
-			<div ng-repeat="evento in eventos.eventos | filter:eventos.filterParam" class="col-md-4">
-				<div class="evento-card">
-					<div class="evento-header">
-						<div class="logo-evento" ng-show="evento.logo_url === '/media/No-img.jpg'" style="background-image: url('../static/img/Identidade_Visual/area_logo.png');"></div>
-						<div class="logo-evento" ng-show="evento.logo_url !== '/media/No-img.jpg'" style="background-image: url({{ evento.logo_url }});"></div>
-						<h2>{{ evento.name | substr:25 }}</h2>
-						<p class="evento-data">{{ evento.start_date | date:'dd/MM' }} a {{ evento.end_date | date:'dd/MM' }}</p>
-					</div>
-					<div class="evento-opt clearfix">
-						<button class="evento-share"></button>
-						<button ng-click="eventos.editEvent(evento.id)" class="evento-edit"></button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+    <div class="arquivos">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="arquivo-card">
+                        <button type="submit" ui-sref="identidade-visual" class="arquivo-add"></button>
+                        <h2>Criar Arquivo</h2>
+                    </div>
+                </div>
+                <div ng-repeat="arquivo in arquivos.arquivos" class="col-md-4">
+                    <div class="arquivo-card-view">
+                            <button ng-click="" class="arquivo-view"></button>
+                            <h2>{{ arquivo.name }}</h2>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

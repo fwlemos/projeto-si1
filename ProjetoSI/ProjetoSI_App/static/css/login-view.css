@@ -14,7 +14,7 @@
 nav.login-nav {
 	height: 220px;
 	padding-top: 80px;
-	background-color: #1b2a49;
+	background-color: #000000;
 }
 
 nav.login-nav .logo {
@@ -26,7 +26,7 @@ nav.login-nav .btn {
 	height: 60px;
 	margin: 5px 0px;
 	background-color: #bbb;
-	color: #295876;
+	color: #000000;
 	font-weight: 700;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -51,7 +51,7 @@ nav.login-nav .usuario {
 }
 
 .body .conta h2 {
-	color: #295876;
+	color: #000000;
 }
 
 .body .conta form input {
@@ -70,45 +70,17 @@ nav.login-nav .usuario {
 	width: 100%;
 	height: 65px;
 	margin-top: 10px;
-	background-color: #295876;
+	background-color: #000000;
 	font-size: 21px;
 	text-transform: none;
-	color: #fff;
+	color: #ffffff;
 }
 
 .body .conta form .btn:disabled {
-	background-color: #999;
+	background-color: #676767;
 	cursor: default;
 }
 
-.body .conta .separator {
-	margin: 15px 0;
-	/*text-align: center;*/
-	text-transform: uppercase;
-	color: #295876;
-	font-size: 17px;
-	display: inline-block;
-}
-
-.body .conta .separator img {
-	width: 45%;
-}
-
-.body .social-buttons .btn {
-	width: 170px;
-	height: 60px;
-	/*background-color: #295876;*/
-	font-size: 16px;
-	color: #fff;
-}
-
-.body .social-buttons .btn:first-child {
-	background-image: url("../img/Tela_de_acesso/botão_login_facebook.png");
-}
-
-.body .social-buttons .btn:last-child {
-	background-image: url("../img/Tela_de_acesso/botão_login_google.png");
-}
 
 .body .espaco-login {
 	height: 400px;

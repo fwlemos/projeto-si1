@@ -1,0 +1,108 @@
+.arquivos {
+	margin-top: 30px;
+}
+
+.arquivos .col-md-4 {
+	margin-bottom: 35px;
+}
+
+.arquivos .arquivo-card {
+	height: 400px;
+	width: 360px;
+	padding: 10px;
+	box-shadow: 0 0 5px #aaa;
+	border-radius: 10px;
+	text-align: center;
+	position: relative;
+}
+
+.arquivos .arquivo-card-view {
+	padding: 10px;
+	text-align: center;
+	position: relative;
+}
+
+
+.arquivo-add {
+	height: 150px;
+	width: 150px;
+	border: none;
+	background: transparent;
+	background-image: url('/static/img/botao_adicionar.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 6em;
+	font-weight: 300;
+}
+
+.arquivo-view {
+	height: 150px;
+	width: 150px;
+	border: none;
+	background: transparent;
+	background-image: url('/static/img/file.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 6em;
+	font-weight: 300;
+}
+
+.arquivos button.arquivo-add {
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+.arquivos button.arquivo-add[disabled] {
+	filter: saturate(0);
+	-webkit-filter: saturate(0);
+}
+
+.arquivos .arquivo-card h2 {
+	color: #555;
+	font-size: 1.9em;
+}
+
+.arquivos .arquivo-card .arquivo-header {
+	width: 300px;
+	margin: 20px auto 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+.arquivos .arquivo-card .arquivo-header .logo-arquivo {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	margin: 50px auto 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.arquivos .arquivo-card .arquivo-header .arquivo-data {
+	color: red;
+}
+
+.arquivos .arquivo-card .arquivo-opt {
+	width: 200px;
+	margin: 25px auto 0;
+}
+
+.arquivos .arquivo-card .arquivo-opt > button {
+	height: 50px;
+	width: 50px;
+	background-color: #bbb;
+	border-radius: 50%;
+	border: none;
+	color: #fff;
+	font-size: 1.7em;
+}
+
+.arquivos .arquivo-card .arquivo-opt .arquivo-edit {
+	float: center;
+	background-image: url('/static/img/lapis-branco.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 22px;
+}
