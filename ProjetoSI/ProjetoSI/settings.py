@@ -78,6 +78,10 @@ TEMPLATES = [
     },
 ]
 
+REST_AUTH_SERIALIZERS = {
+   'TOKEN_SERIALIZER': 'ProjetoSI_App.serializers.custom_token_serializer.TokenSerializer',
+}
+
 WSGI_APPLICATION = 'ProjetoSI.wsgi.application'
 
 

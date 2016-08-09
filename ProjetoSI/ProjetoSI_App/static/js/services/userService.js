@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	app.service('userService', ['$http', '$cookies', '$rootScope', '$q', 'SESSION_COOKIE_NAME', 'AUTH_EVENT', function($http, $cookies, $rootScope, $q, SESSION_COOKIE_NAME, AUTH_EVENT) {
+	app.service('userService', ['$http', '$cookies', '$rootScope', '$q', '$state', 'SESSION_COOKIE_NAME', 'AUTH_EVENT', function($http, $cookies, $rootScope, $q, $state, SESSION_COOKIE_NAME, AUTH_EVENT) {
 		var self = this;
 
 		self.userId = -1;
@@ -40,7 +40,6 @@
 
 		this.getUserId = function() {
 			return self.getUser().then(function () {
-				console.log("USER ID: " + self.userId);
 				return self.userId;
 			});
 		};
@@ -63,6 +62,8 @@
 		};
 
 		this.getUser = function() {
+			console.log("ENTROU");
+			console.log($rootScope);
             var deferred = $q.defer();
 
             if (self.isLoggedIn()) {
@@ -71,6 +72,7 @@
             }
 
             var token = $cookies.get(SESSION_COOKIE_NAME);
+			console.log("TOKEN: " + token);
 
             if (token) {
                 $http.get('user-id/' + token).then(function(res) {
@@ -90,7 +92,6 @@
 
         this.login = function(usuario) {
             var deferred = $q.defer();
-			console.log("USUARIO " + usuario);
             $http.post('login/', usuario).success(function(data) {
                 if (data.non_field_errors === undefined) {
                     self.loginById(data.user, usuario.keepLogin, data.key).then(function() {
