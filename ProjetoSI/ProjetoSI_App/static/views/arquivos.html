@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="arquivos">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="arquivo-card">
+                        <button type="submit" ui-sref="identidade-visual" class="arquivo-add"></button>
+                        <h2>Criar Arquivo</h2>
+                    </div>
+                </div>
+                <div ng-repeat="arquivo in arquivos.arquivos" class="col-md-4">
+                    <div class="arquivo-card-view">
+                            <button ng-click="" class="arquivo-view"></button>
+                            <h2>{{ arquivo.name }}</h2>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

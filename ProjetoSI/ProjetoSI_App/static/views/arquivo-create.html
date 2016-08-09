@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="col-md-9">
+        <label>Nome do arquivo</label>
+        <input type="text" name="nome" ng-model="arquivador.arquivo.name" required/>
+        <textarea name="conteudo" ng-model="arquivador.arquivo.content" required></textarea>
+        <button class="btn f-right" ui-sref="arquivos" ng-click="arquivador.criaArquivo(arquivador.arquivo, , identidadeVisual.picFile2)">Próxima etapa</button>
+    </div>
+</div>

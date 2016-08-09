@@ -19,7 +19,7 @@
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #1b5d7e;
+    color: #000000;
 }
 
 .ngdialog.ngdialog-theme-custom .ngdialog-content form {
@@ -105,7 +105,7 @@
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #1b5d7e;
+    color: #000000;
 }
 
 .ngdialog.ngdialog-theme-custom2 .ngdialog-content form {

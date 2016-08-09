@@ -25,4 +25,5 @@ urlpatterns = [
 
     url(r'^projeto-si/', include('ProjetoSI_App.urls.index_urls'), name='namespace_index'),
     url(r'^projeto-si/', include('ProjetoSI_App.urls.user_urls'), name='namespace_user_crud'),
+    url(r'^projeto-si/', include('ProjetoSI_App.urls.file_urls'), name='namespace_file_upload'),
 ]

@@ -7,21 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ProjetoSI1</title>
+    <title>Projeto SI 1 - 2016.1</title>
+
+    <link href="{% static 'libs/bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/font-awesome/css/font-awesome.css' %}?t={{ now }}">
+
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog.css' %}?t={{ now }}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-default.css' %}?t={{ now }}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-plain.css' %}?t={{ now }}">
+
+    <!-- CSS geral e das views -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?t={{ now }}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/barra-navegacao.css' %}?t={{ now }}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/arquivo.css' %}?t={{ now }}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login-view.css' %}?t={{ now }}">
+    <link href="{% static 'css/ng-dialog.css' %}?t={{ now }}" rel="stylesheet" type="text/css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'libs/font-awesome/css/font-awesome.css' %}">
-    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog.css' %}">
-    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-default.css' %}">
-    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-plain.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/ng-dialog.css' %}">
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/barra-navegacao.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login-view.css' %}">
-
 </head>
 <body ng-controller="appController as app">
     <ng-include src="'/static/views/barra-navegacao.html'"></ng-include>
@@ -29,33 +31,34 @@
         <div class="view" ui-view></div>
     </div>
 
-    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
-    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'libs/jquery/dist/jquery.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.js' %}?t={{ now }}"></script>
 
     <!-- Angular -->
-    <script src="{% static 'libs/angular/angular.min.js' %}"></script>
-    <script src="{% static 'libs/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
-    <script src="{% static 'libs/angular-cookies/angular-cookies.min.js' %}"></script>
-    <script src="{% static 'libs/angular-animate/angular-animate.min.js' %}"></script>
-    <script src="{% static 'libs/ng-file-upload/ng-file-upload.min.js' %}"></script>
-    <script src="{% static 'libs/ng-file-upload/ng-file-upload-shim.js' %}"></script>
-    <script src="{% static 'libs/ng-file-upload/ng-file-upload-all.min.js' %}"></script>
-    <script src="{% static 'libs/ng-dialog/js/ngDialog.min.js' %}"></script>
-    <script src="{% static 'libs/angular-messages/angular-messages.min.js' %}"></script>
+    <script src="{% static 'libs/angular/angular.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/angular-ui-router/release/angular-ui-router.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/angular-animate/angular-animate.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/angular-cookies/angular-cookies.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload-shim.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/ng-file-upload/ng-file-upload-all.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/ng-dialog/js/ngDialog.js' %}?t={{ now }}"></script>
+    <script src="{% static 'libs/angular-messages/angular-messages.js' %}?t={{ now }}"></script>
 
-    <!-- App -->
-    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/app.js' %}?t={{ now }}"></script>
 
     <!-- Services -->
-    <script src="{% static 'js/services/userService.js' %}"></script>
+    <script src="{% static 'js/services/userService.js' %}?t={{ now }}"></script>
 
     <!-- Controllers -->
-    <script src="{% static 'js/controllers/appController.js' %}"></script>
-    <script src="{% static 'js/controllers/loginController.js' %}"></script>
+    <script src="{% static 'js/controllers/appController.js' %}?t={{ now }}"></script>
+    <script src="{% static 'js/controllers/loginController.js' %}?t={{ now }}"></script>
+    <script src="{% static 'js/controllers/arquivosController.js' %}?t={{ now }}"></script>
+    <script src="{% static 'js/controllers/arquivadorController.js' %}?t={{ now }}"></script>
+    <script src="{% static 'js/controllers/senhaResetController.js' %}?t={{ now }}"></script>
 
     <!-- Directives -->
-    <script src="{% static 'js/directives/loginButton.js' %}"></script>
-    <script src="{% static 'js/directives/passwordMatch.js' %}"></script>
-
+    <script src="{% static 'js/directives/loginButton.js' %}?t={{ now }}"></script>
+    <script src="{% static 'js/directives/passwordMatch.js' %}?t={{ now }}"></script>
 </body>
 </html>

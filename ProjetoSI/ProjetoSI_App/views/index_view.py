@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
+import time
+
 
 def index(request):
-
-    return render(request, 'index.html')
+    now = int(time.time())
+    data = {
+        'now': now
+    }
+    return render(request, 'index.html', data)

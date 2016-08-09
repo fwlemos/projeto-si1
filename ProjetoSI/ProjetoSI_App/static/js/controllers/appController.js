@@ -14,7 +14,9 @@
 		};
 
         $rootScope.$on(AUTH_EVENT.loginSuccess, function() {
-		    ctrl.user = userService.getUser();
+		    userService.getUser().then(function (user) {
+				ctrl.user = user;
+			});
         });
 	}]);
 })();
