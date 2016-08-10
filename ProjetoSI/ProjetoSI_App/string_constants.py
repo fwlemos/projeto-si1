@@ -8,4 +8,6 @@ UPLOADED_FILE_DIRECTORY = 'user_{0}/{1}'
 
 FILE_UNICODE = 'File: %s'
 
+FOLDER_UNICODE = 'Folder: %s'
+
 USER_COLUMN = 'user'
