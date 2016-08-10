@@ -6,26 +6,18 @@
 	margin-bottom: 35px;
 }
 
-.arquivos .arquivo-card {
-	height: 400px;
-	width: 360px;
-	padding: 10px;
-	box-shadow: 0 0 5px #aaa;
-	border-radius: 10px;
-	text-align: center;
-	position: relative;
-}
-
 .arquivos .arquivo-card-view {
-	padding: 10px;
+	padding: 20px;
 	text-align: center;
 	position: relative;
+	width: auto;
+	height: 110px;
 }
 
 
 .arquivo-add {
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	border: none;
 	background: transparent;
 	background-image: url('/static/img/botao_adicionar.svg');
@@ -37,8 +29,8 @@
 }
 
 .arquivo-view {
-	height: 150px;
-	width: 150px;
+	height: 50px;
+	width: 50px;
 	border: none;
 	background: transparent;
 	background-image: url('/static/img/file.svg');
@@ -46,12 +38,7 @@
 	background-size: cover;
 	background-position: center;
 	font-size: 6em;
-	font-weight: 300;
-}
-
-.arquivos button.arquivo-add {
-	margin-top: 50px;
-	margin-bottom: 60px;
+	font-weight: 100;
 }
 
 .arquivos button.arquivo-add[disabled] {
@@ -61,7 +48,15 @@
 
 .arquivos .arquivo-card h2 {
 	color: #555;
-	font-size: 1.9em;
+	font-size: 1em;
+	margin-top: 0px;
+
+}
+
+.arquivos .arquivo-card-view h2 {
+	color: #555;
+	font-size: 1em;
+	margin-top: 0px;
 }
 
 .arquivos .arquivo-card .arquivo-header {
@@ -78,6 +73,10 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.col-md-10 {
+	box-shadow: 0 0 5px #aaa;
 }
 
 .arquivos .arquivo-card .arquivo-header .arquivo-data {

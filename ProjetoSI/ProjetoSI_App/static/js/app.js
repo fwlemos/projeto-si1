@@ -66,7 +66,7 @@ var app = angular.module('projetoSI1', ['ui.router', 'ngDialog', 'ngCookies', 'n
             .state('arquivo-create', {
                 parent: 'app',
 				url: '/arquivo-create',
-				templateUrl: '/static/views/arquivos.html',
+				templateUrl: '/static/views/arquivo-create.html',
 				controller: 'arquivadorController',
 				controllerAs: 'arquivador',
 				resolve: {

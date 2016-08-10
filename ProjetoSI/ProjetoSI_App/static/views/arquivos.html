@@ -1,18 +1,22 @@
 <div class="container">
     <div class="arquivos">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="arquivo-card">
-                        <button type="submit" ui-sref="identidade-visual" class="arquivo-add"></button>
-                        <h2>Criar Arquivo</h2>
-                    </div>
+        <div class="row">
+            <div class="col-md-2" style="text-align: center">
+                <div>
+                    <button type="submit" ui-sref="arquivo-create" class="arquivo-add"></button>
+                    <h4>Criar Arquivo</h4>
+                    <button type="submit" ui-sref="arquivo-create" class="arquivo-add"></button>
+                    <h4>Criar Pasta</h4>
                 </div>
-                <div ng-repeat="arquivo in arquivos.arquivos" class="col-md-4">
+                </div>
+                <div class="col-md-10">
+                <div ng-repeat="arquivo in arquivos.arquivos" class="col-md-2">
                     <div class="arquivo-card-view">
-                            <button ng-click="" class="arquivo-view"></button>
-                            <h2>{{ arquivo.name }}</h2>
+                        <button ng-click="" class="arquivo-view"></button>
+                        <h2>{{ arquivo.name }}</h2>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>

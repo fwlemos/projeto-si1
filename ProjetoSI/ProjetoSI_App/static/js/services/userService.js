@@ -62,8 +62,6 @@
 		};
 
 		this.getUser = function() {
-			console.log("ENTROU");
-			console.log($rootScope);
             var deferred = $q.defer();
 
             if (self.isLoggedIn()) {
@@ -72,7 +70,6 @@
             }
 
             var token = $cookies.get(SESSION_COOKIE_NAME);
-			console.log("TOKEN: " + token);
 
             if (token) {
                 $http.get('user-id/' + token).then(function(res) {
