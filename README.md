@@ -22,6 +22,6 @@ Repositório público do projeto da disciplina Sistemas de Informação 1 - 2016
 6 - Installar o conector MySQL (https://dev.mysql.com/downloads/connector/python/)  
 7 - Executar o comando 'pip install MySQL-python'  
 8 - Acessar a raíz do projeto e executar bower install  
-9 - Criar a tabela 'projeto-si1' no servidor MySQL  
+9 - Criar a database 'projeto-si1' no servidor MySQL  
 10 - Na raíz do projeto executar 'python manage.py makemigrations' e 'python manage.py migrate'  
 11 - Por fim, executar 'python manage.py runserver'
