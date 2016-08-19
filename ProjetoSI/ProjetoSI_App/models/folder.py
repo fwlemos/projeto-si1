@@ -14,7 +14,7 @@ class Folder(models.Model):
 
     parent = models.ForeignKey('self', verbose_name='parent', null=True, blank=True,
                                related_name='children')
-    name = models.CharField(_('name'), max_length=255)
+    name = models.CharField(blank=False, max_length=50, db_column='name')
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user')
 
