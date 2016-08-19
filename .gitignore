@@ -19,7 +19,7 @@
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
-ProjetoSI/authentication/migrations/
-ProjetoSI/authentication/static/libs/
+ProjetoSI/ProjetoSI_App/migrations/
+ProjetoSI/ProjetoSI_App/static/libs/
 
 env/**
