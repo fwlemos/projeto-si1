@@ -19,7 +19,8 @@
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
-ProjetoSI/authentication/migrations/
-ProjetoSI/authentication/static/libs/
+ProjetoSI/ProjetoSI_App/migrations/
+ProjetoSI/ProjetoSI_App/static/libs/
 
 env/**
+ProjetoSI/MySQL_python-1.2.5-cp27-none-win32.whl
